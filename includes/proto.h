@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 13:02:21 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/05 13:13:55 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/05 14:15:28 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 # define PROTO_H
 
 void	ft_usage(void);
+void	ft_readfile(int argc, char **argv);
 
 #endif

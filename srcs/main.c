@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 12:50:11 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/05 13:14:26 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/05 14:49:22 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 int		main(int argc, char **argv)
 {
+	//t_fillit var;
 	if (argc != 2)
 	{
 		ft_usage();
 		exit(EXIT_FAILURE);
 	}
+	ft_readfile(argc, argv);
 	(void)argv;
-	ft_putstr("Hello");
 	return (0);
 }

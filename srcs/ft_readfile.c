@@ -1,23 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_readfile.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/03 15:50:42 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/05 14:08:38 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/05 14:13:32 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/05 14:15:46 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/includes.h"
 
-char	*ft_strnew(size_t size)
+void	ft_readfile(int argc, char **argv)
 {
-	char	*str;
+	char	buffer;
+	int		fd;
+	int		i;
 
-	str = (char *)malloc(sizeof(char) * (size + 1));
-	if (str)
-		return (ft_memset(str, 0, size + 1));
-	return (NULL);
+	i = 1;
+	while (i < argc)
+	{
+		fd = open(argv[i], O_RDONLY);
+		if (fd >= 0)
+		{
+			while (read(fd, &buffer, 1) != 0)
+				write(1, &buffer, 1);
+		}
+		else
+		{
+			ft_putstr("ft_cat: ");
+			ft_putstr(argv[i]);
+			ft_putendl(": No such file or directory");
+		}
+		close(fd);
+		i++;
+	}
 }
+
+

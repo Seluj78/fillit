@@ -6,13 +6,14 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/11/05 13:14:19 by jlasne           ###   ########.fr        #
+#    Updated: 2016/11/05 14:13:16 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = fillit
 
 SRC = main.c\
-	  ft_usage.c
+	  ft_usage.c\
+	  ft_readfile.c
 
 OBJ = $(SRC:.c=.o)
 
