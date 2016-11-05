@@ -6,13 +6,13 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/11/04 10:44:01 by jlasne           ###   ########.fr        #
+#    Updated: 2016/11/05 13:03:47 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 NAME = fillit
 
-SRC = fillit.c
+SRC = main.c\
+	  ft_usage.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -22,15 +22,29 @@ SRC_POS = $(addprefix $(SRC_PATH),$(SRC))
 
 INC = -I includes
 
+LIBFT =	srcs/libft/libft.a
+
+CC = gcc
+
+FLAGS = -Wall -Wextra -Werror
+
 all: $(NAME)
 
-$(NAME):
-	gcc -Wall -Werror -Wextra $(SRC_POS)
+$(NAME): $(LIBFT) $(OBJ)
+		$(CC) $(FLAGS) $(OBJ) -o $(NAME) $(LIBFT)
+
+$(OBJ): $(LIBFT)
+		$(CC) $(FLAGS) -c $(SRC_POS)
+
+$(LIBFT):
+		make -C ./srcs/libft/
 
 clean:
-	/bin/rm -f $(OBJ)
+		rm -f $(OBJ)
+			make clean -C ./srcs/libft/
 
 fclean: clean
-	/bin/rm -f $(NAME)
+		rm -f $(NAME)
+			make fclean -C ./srcs/libft/
 
 re: fclean all
