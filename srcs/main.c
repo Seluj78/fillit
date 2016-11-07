@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 12:50:11 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/07 15:52:00 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/07 15:55:07 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int		main(int argc, char **argv)
 	{
 		lol = split(buf);
 	}
-	ft_inittab(&var, 5);
+	//ft_inittab(&var, 5);
 	return (0);
 }
