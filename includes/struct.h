@@ -1,4 +1,4 @@
-/*e************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   struct.h                                           :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 13:08:50 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/07 14:29:35 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/07 14:54:24 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,16 @@
 # define TRUE 1
 # define FALSE 0
 # define BUFF_SIZE 4096
-# define null 0
 
 typedef int		t_bool;
 
-typedef struct s_tetrimino t_tetrimino;
+typedef struct s_tetrimino		t_tetrimino;
 
-struct  s_tetrimino
+struct							s_tetrimino
 {
-	char    *str;
-	char    lettre;
-	t_tetrimino *next;
+	char			*str;
+	char			lettre;
+	t_tetrimino		*next;
 };
 
 #endif
