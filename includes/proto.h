@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 13:02:21 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/07 15:02:28 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/07 15:45:00 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int				count_tetri(char *str);
 t_tetrimino		*new_tetri(char *str, int nb);
 char			*convert(char *str, int i);
 t_tetrimino		*split(char *str);
+void			ft_inittab(t_tetrivar* var, int size);
 
 #endif

@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_inittab.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/05 12:50:11 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/07 15:52:00 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/07 15:30:35 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/07 15:54:03 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/includes.h"
 
-int		main(int argc, char **argv)
+void	ft_inittab(t_tetrivar* var, int size)
 {
-	t_tetrimino	*lol;
-	t_tetrivar	 var;
-	int			fd;
-	int			ret;
-	char		buf[BUFF_SIZE + 1];
+	int i;
+	int j;
 
-	if (argc != 2)
+	i = size;
+	j= 0;
+	var->tab = (char**)malloc(sizeof(char*) * size);
+	while (i > 0)
 	{
-		ft_usage();
-		exit(EXIT_FAILURE);
+		var->tab[j] = (char*)malloc(sizeof(char) * size);
+		var->tab[j] = ft_memset(var->tab[j], '.', size);
+		i++;
+		j++;
 	}
-	fd = open(argv[1], O_RDONLY);
-	ret = read(fd, buf, BUFF_SIZE);
-	if (check_space(buf) == 1 && check_tetri(buf) == 1)
-	{
-		lol = split(buf);
-	}
-	ft_inittab(&var, 5);
-	return (0);
+	ft_putstr(var->tab[0]);
+	ft_putstr(var->tab[1]);
+	ft_putstr(var->tab[2]);
+	ft_putstr(var->tab[3]);
+	ft_putstr(var->tab[4]);
+
 }

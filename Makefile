@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/11/07 15:02:34 by jlasne           ###   ########.fr        #
+#    Updated: 2016/11/07 15:43:23 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = fillit
@@ -16,7 +16,8 @@ SRC = main.c\
 	  ft_checkbuf.c\
 	  ft_checktetri.c\
 	  ft_get_sizes.c\
-	  ft_tetri.c
+	  ft_tetri.c\
+	  ft_inittab.c
 
 OBJ = $(SRC:.c=.o)
 
