@@ -6,16 +6,16 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:09:38 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/07 14:20:14 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/07 14:48:12 by alcollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/includes.h"
 
-int     check_space(char *str)
+int			check_space(char *str)
 {
-	int     i;
-	int     j;
+	int		i;
+	int		j;
 
 	j = 0;
 	i = 20;
@@ -35,17 +35,17 @@ int     check_space(char *str)
 			i = i + 21;
 		}
 		else
-			return (0)  ;
+			return (0);
 	}
 	return (1);
 }
 
-int     check_line(char *str, int i)
+int			check_line(char *str, int i)
 {
-	int     diese;
-	int     point;
-	int     n;
-	int     max;
+	int		diese;
+	int		point;
+	int		n;
+	int		max;
 
 	diese = 0;
 	point = 0;
@@ -66,10 +66,10 @@ int     check_line(char *str, int i)
 	return (0);
 }
 
-int     check_forme(char *str, int i)
+int			check_forme(char *str, int i)
 {
-	int     hauteur;
-	int     largeur;
+	int		hauteur;
+	int		largeur;
 
 	hauteur = get_hauteur(str, i);
 	largeur = get_largeur(str, i);
@@ -82,10 +82,10 @@ int     check_forme(char *str, int i)
 	return (0);
 }
 
-int     check_link(char *str, int i)
+int			check_link(char *str, int i)
 {
-	int     max;
-	int     link;
+	int		max;
+	int		link;
 
 	max = i + 19;
 	link = 0;
@@ -104,11 +104,11 @@ int     check_link(char *str, int i)
 	return (0);
 }
 
-int     check_vide(char *str, int i)
+int			check_vide(char *str, int i)
 {
-	int     diese;
-	int     x;
-	int     max;
+	int		diese;
+	int		x;
+	int		max;
 
 	diese = 0;
 	x = 0;

@@ -6,15 +6,15 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:12:43 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/07 14:14:44 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/07 14:48:28 by alcollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/includes.h"
 
-int     check_tetri(char *str)
+int		check_tetri(char *str)
 {
-	int     i;
+	int		i;
 
 	i = 0;
 	while (str[i])

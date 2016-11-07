@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 12:50:11 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/07 14:25:46 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/07 14:45:56 by alcollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 int		main(int argc, char **argv)
 {
-	t_tetrimino *lol;
-	int     fd;
-	int     ret;
-	char    buf[BUFF_SIZE + 1];
+	t_tetrimino	*lol;
+	int			fd;
+	int			ret;
+	char		buf[BUFF_SIZE + 1];
+
 	if (argc != 2)
 	{
 		ft_usage();
