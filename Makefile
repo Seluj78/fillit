@@ -6,14 +6,19 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/11/05 14:13:16 by jlasne           ###   ########.fr        #
+#    Updated: 2016/11/07 14:20:47 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = fillit
 
 SRC = main.c\
 	  ft_usage.c\
-	  ft_readfile.c
+	  ft_readfile.c\
+	  ft_countfilesize.c\
+	  ft_checkbuf.c\
+	  ft_checktetri.c\
+	  ft_get_sizes.c\
+	  ft_tetri.c
 
 OBJ = $(SRC:.c=.o)
 
