@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:20:31 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/07 14:42:39 by alcollin         ###   ########.fr       */
+/*   Updated: 2016/11/07 14:56:24 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ t_tetrimino		*split(char *str)
 
 	nb = 0;
 	i = 0;
-	debut = null;
-	ptr = null;
+	debut = NULL;
+	ptr = NULL;
 	strptr = convert(str, i);
 	debut = new_tetri(strptr, nb);
 	ptr = debut;
