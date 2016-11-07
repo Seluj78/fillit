@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 13:08:50 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/07 14:54:24 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/07 15:14:31 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ struct							s_tetrimino
 	char			*str;
 	char			lettre;
 	t_tetrimino		*next;
+};
+
+typedef struct s_tetrivar		t_tetrivar;
+
+struct							s_tetrivar
+{
+	char **tab;
 };
 
 #endif
