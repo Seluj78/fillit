@@ -6,17 +6,17 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 14:15:30 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/07 14:18:08 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/07 14:44:24 by alcollin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/includes.h"
 
-int     get_largeur(char *str, int i)
+int			get_largeur(char *str, int i)
 {
-	int     max;
-	int     largeur;
-	int     vide;
+	int		max;
+	int		largeur;
+	int		vide;
 
 	vide = 0;
 	largeur = 0;
@@ -37,11 +37,11 @@ int     get_largeur(char *str, int i)
 	return (largeur);
 }
 
-int     get_hauteur(char *str, int i)
+int			get_hauteur(char *str, int i)
 {
-	int     max;
-	int     hauteur;
-	int     vide;
+	int		max;
+	int		hauteur;
+	int		vide;
 
 	hauteur = 0;
 	vide = 0;
