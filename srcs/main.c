@@ -14,7 +14,7 @@
 
 int		main(int argc, char **argv)
 {
-	t_tetrimino	*lol;
+	t_tetrimino	*list;
 	t_tetrivar	 var;
 	int			fd;
 	int			ret;
@@ -29,7 +29,7 @@ int		main(int argc, char **argv)
 	ret = read(fd, buf, BUFF_SIZE);
 	if (check_space(buf) == 1 && check_tetri(buf) == 1)
 	{
-		lol = split(buf);
+		list = split(buf);
 	}
 	ft_inittab(&var, 50);
 	ft_printgrid(&var, 50);
