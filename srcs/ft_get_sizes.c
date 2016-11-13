@@ -12,6 +12,15 @@
 
 #include "../includes/includes.h"
 
+void		get_size(t_tetrivar *var, int i)
+{
+	if ((i % 2) == 1)
+	{
+		i++;
+	}
+	var->tab_size = (i * 4);
+}
+
 int			get_largeur(char *str, int i)
 {
 	int		max;

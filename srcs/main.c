@@ -31,7 +31,10 @@ int		main(int argc, char **argv)
 	{
 		list = split(buf);
 	}
-	ft_inittab(&var, 50);
-	ft_printgrid(&var, 50);
+	var.tab_size = 50;
+	ft_inittab(&var, var.tab_size);
+	ft_printgrid(&var, var.tab_size);
+	(void)ret;
+	(void)list;
 	return (0);
 }
