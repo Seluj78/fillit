@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 12:50:11 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/14 11:34:29 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/14 12:34:34 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 int		main(int argc, char **argv)
 {
-	t_tetrimino	*lol;
+	t_tetrimino	*list;
 	t_tetrivar	 var;
 	int			fd;
 	int			ret;
 	char		buf[BUFF_SIZE + 1];
-	int			size;
 
 	if (argc != 2)
 	{
@@ -30,10 +29,12 @@ int		main(int argc, char **argv)
 	ret = read(fd, buf, BUFF_SIZE);
 	if (check_space(buf) == 1 && check_tetri(buf) == 1)
 	{
-		lol = split(buf);
+		list = split(buf);
 	}
-	size = count_tetri(buf);
-	ft_inittab(&var, size * 4);
-	ft_printgrid(&var, size * 4);
+	var.tab_size = (count_tetri(buf) * 4);
+	ft_inittab(&var, var.tab_size);
+	ft_printgrid(&var, var.tab_size);
+	(void)ret;
+	(void)list;
 	return (0);
 }

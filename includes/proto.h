@@ -30,5 +30,6 @@ char			*convert(char *str, int i);
 t_tetrimino		*split(char *str);
 void			ft_inittab(t_tetrivar* var, int size);
 void			ft_printgrid(t_tetrivar* var, int size);
+void			get_size(t_tetrivar *var, int i);
 
 #endif

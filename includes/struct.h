@@ -32,7 +32,8 @@ typedef struct s_tetrivar		t_tetrivar;
 
 struct							s_tetrivar
 {
-	char **tab;
+	int		tab_size;
+	char 	**tab;
 };
 
 #endif
