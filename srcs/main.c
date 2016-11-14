@@ -6,7 +6,7 @@
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 12:50:11 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/08 15:22:13 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/14 11:34:29 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int		main(int argc, char **argv)
 	int			fd;
 	int			ret;
 	char		buf[BUFF_SIZE + 1];
+	int			size;
 
 	if (argc != 2)
 	{
@@ -31,7 +32,8 @@ int		main(int argc, char **argv)
 	{
 		lol = split(buf);
 	}
-	ft_inittab(&var, 50);
-	ft_printgrid(&var, 50);
+	size = count_tetri(buf);
+	ft_inittab(&var, size * 4);
+	ft_printgrid(&var, size * 4);
 	return (0);
 }
