@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/11/05 14:05:53 by jlasne           ###   ########.fr        #
+#    Updated: 2016/11/17 10:27:46 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,8 @@ SRC = ft_bzero.c\
 	  ft_strsub.c\
 	  ft_power.c\
 	  ft_split_whitespaces.c\
-	  ft_cat.c
+	  ft_cat.c\
+	  ft_sqrt.c
 
 OBJ = $(SRC:.c=.o)
 
